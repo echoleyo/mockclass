@@ -1,12 +1,17 @@
+#include "stdafx.h"
+#include <iostream>
+//#include "animal.h"
 
-#include "animal.h"
+using namespace std;
 
-class Turtles : public Animal
+//class Turtles : public Animal
+class Turtles
 {
     public:
-        int point_x;
-        int point_y;
-         ~Turtles() {};
+        Turtles(){};
+         ~Turtles() { cout << "Turtles is derived.";};
+         int point_x;
+         int point_y;
          void PenUp();
          void PenDown();
          void Forward(int distance);

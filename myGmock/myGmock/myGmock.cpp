@@ -1,10 +1,10 @@
 // myGmock.cpp : Defines the entry point for the console application.
-//
-#include "stdafx.h"
 
-#include "turtles.h"
+
+#include "stdafx.h"
 #include <iostream>
 
+#include "turtles.h"
 
 using namespace std;
 
@@ -18,6 +18,7 @@ int _tmain(int argc, _TCHAR* argv[])
     cin >> y;
     cout << "Enter length: " << endl;
     cin >> length;
+    turtle.Forward(39);
     if ( turtle.isPositive(x)) {
         cout << "x is positive.\n";
     }
@@ -29,6 +30,8 @@ int _tmain(int argc, _TCHAR* argv[])
     }
     
     turtle.drawSquare(x, y, length);    
+
+    turtle.PenDown();
 
 
     system("PAUSE");

@@ -4,44 +4,49 @@
 
 using namespce std;
 
+Turles:Turles()
+{
+    cout<<"Turles instanted\n" << endl;    
+};
+
 void Turtles::PenUp()
 {
     cout<<"Put pen up." << endl;    
 }
 
-void Turles::PenDown()
+void Turtles::PenDown()
 {
     cout<<"Put pen down." << endl;    
 }
 
-void Turles::Forward(int distance)
+void Turtles::Forward(int distance)
 {
     cout<<"forward: " << distance << endl;    
 }
 
-void Turles::Turn(int degrees)
+void Turtles::Turn(int degrees)
 {
     cout<<"Turn: " << degrees << endl;    
 }
 
-void Turles::GoTo(int x, int y)
+void Turtles::GoTo(int x, int y)
 {
     point_x = x;
     point_y = y;
     cout<<"Go to point: (" << x << ","<< y << ")" << endl;    
 }
 
-int Turles::GetX()
+int Turtles::GetX()
 {
     return point_x;
 }
 
-int Turles::GetY()
+int Turtles::GetY()
 {
     return point_y;
 }
 
-bool Turles::isPositive(int x)
+bool Turtles::isPositive(int x)
 {
     bool rc = false;
     if (x > 0){
@@ -50,7 +55,7 @@ bool Turles::isPositive(int x)
     return rc;
 }
 
-void Turles::drawSquare(int x, int y, int length)
+void Turtles::drawSquare(int x, int y, int length)
 {
     Goto(x, y);
     Forward(length);
