@@ -1,50 +1,66 @@
-/*
-virtual ~Turtle() {}
-virtual void PenUp() = 0;
-virtual void PenDown() = 0;
-virtual void Forward(int distance) = 0;
-virtual void Turn(int degrees) = 0;
-virtual void GoTo(int x, int y) = 0;
-virtual int GetX() const = 0;
-virtual int GetY() const = 0;
-        */
+#include "stdafx.h"
 #include <iostream>
 
-using namespce std;
+#include "turtles.h"
 
+using namespace std;
+
+Turtles::Turtles()
+{
+    cout<<"Turtles init.\n";
+}
 void Turtles::PenUp()
 {
     cout<<"Put pen up." << endl;    
 }
 
-void Turles::PenDown()
+void Turtles::PenDown()
 {
     cout<<"Put pen down." << endl;    
 }
 
-void Turles::Forward(int distance)
+void Turtles::Forward(int distance)
 {
     cout<<"forward: " << distance << endl;    
 }
 
-void Turles::Turn(int degrees)
+void Turtles::Turn(int degrees)
 {
     cout<<"Turn: " << degrees << endl;    
 }
 
-void Turles::GoTo(int x, int y)
+void Turtles::GoTo(int x, int y)
 {
     point_x = x;
     point_y = y;
     cout<<"Go to point: (" << x << ","<< y << ")" << endl;    
 }
 
-int Turles::GetX()
+int Turtles::GetX()
 {
     return point_x;
 }
 
-int Turles::GetY()
+int Turtles::GetY()
 {
     return point_y;
+}
+
+bool Turtles::isPositive(int x)
+{
+    return x > 0;
+}
+
+void Turtles::drawSquare(int x, int y, int length)
+{
+    system("PAUSE");
+    GoTo(x, y);
+    Turn(90);
+    Forward(length);
+    Turn(90);
+    Forward(length);
+    Turn(90);
+    Forward(length);
+    Turn(90);
+    Forward(length);
 }

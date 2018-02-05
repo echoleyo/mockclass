@@ -8,8 +8,8 @@ using namespace std;
 class Turtles
 {
     public:
-        Turtles(){};
-         ~Turtles() { cout << "Turtles is derived.";};
+        Turtles();
+         ~Turtles() { cout << "Turtles is derived.\n";};
          int point_x;
          int point_y;
          void PenUp();
@@ -17,8 +17,8 @@ class Turtles
          void Forward(int distance);
          void Turn(int degrees);
          void GoTo(int x, int y);
-         int GetX() const;
-         int GetY() const;
+         int GetX();
+         int GetY();
          bool isPositive(int x);
          void drawSquare(int x, int y, int length);
 };
